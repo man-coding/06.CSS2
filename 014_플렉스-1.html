@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+
+        div{
+            width: 700px;
+            border: solid 1px black;
+            margin: 20px;
+            padding: 10px;
+        }
+        p{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        .parent1 > p{  /*단점: 요소사이에 공백이 발생. 계산을 잘못하면 줄이 바뀜*/
+            display: inline-block;
+            margin: 0 30px;
+        }
+        .parent2 > p{ /*단점: 부모가 자손의 높이를 인식하지 못함. 계산을 잘못하면 이상해짐*/
+            float: left;
+            /* margin: 0 30px;  부모보다 여백이 커서 줄이 무너짐 */
+        }
+        .parent2{  /*부모 높이를 높여서 맞출 수는 있음.*/
+            height: 100px;
+        }
+
+        .parent3{   /*가장 많이 사용함.*/
+            display: flex;
+
+        }
+        .parent3>p{
+            margin: 0 30px;
+        }
+
+        
+
+        
+        
+    </style>
+</head>
+
+<body>
+
+    <h3>display: inline-block</h3>
+    <div class="parent1">
+        <p>child1</p>
+        <p>child2</p>
+        <p>child3</p>
+        <p>child4</p>
+        <p>child5</p>
+
+
+
+    </div>
+
+    <h3>float: left</h3>
+    <div class="parent2">
+        <p>child1</p>
+        <p>child2</p>
+        <p>child3</p>
+        <p>child4</p>
+        <p>child5</p>
+
+
+
+    </div>
+
+    <h3>display: flex</h3>
+    <div class="parent3">
+        <p>child1</p>
+        <p>child2</p>
+        <p>child3</p>
+        <p>child4</p>
+        <p>child5</p>
+
+
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            text-align: center;
+        }
+
+        .box {    /*가장 큰 박스 크기 먼저 정하기*/
+            width: 600px;
+            height: 400px;
+        }
+
+        header {
+            background-color: grey;
+            height: 10%;
+        }
+
+        section {
+            height: 80%;
+            display: flex;  /*방향 row가 기본값*/
+            font-weight: bold;
+            
+        }
+
+        .left {
+            background-color: skyblue;
+            width: 20%;
+            
+        }
+
+        .center {
+            background-color: whitesmoke;
+            width: 60%;
+            
+        }
+
+        .right {
+            background-color: red;
+            width: 20%;
+            
+        }
+
+        footer {
+            background-color: grey;
+            height: 10%;
+
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- div > section > div -->
+    <div class="box">
+        
+        <header>header</header>
+
+
+        <section>
+            <div class="left">left</div>
+            <div class="center">center</div>
+            <div class="right">right</div>
+        </section>
+
+        <footer>footer</footer>
+    </div>
+
+
+</body>
+
+</html>

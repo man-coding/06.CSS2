@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+        }
+
+        /*모든 div를 flex 컨테이너로 지정*/
+        div{
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .parent1{
+            flex-direction: row;  /*자손들이 수평으로 정렬됨*/
+        }
+        .parent2{
+            flex-direction: column;  /*자손들이 수직으로 정렬됨*/
+        }
+        .parent3{ /*가로길이가 부모보다 커지면 줄바꿈*/
+            flex-wrap: wrap;
+        }
+
+        .parent4{ /*자손들을 가운데 정렬*/
+            height: 700px;
+            border: 3px solid red;
+            
+            flex-direction: column;  /*많이쓰임*/
+            justify-content: center; /*x축 정렬*/
+            align-items: center;  /*y축 정렬*/
+            
+        }
+
+        p{
+            border: solid 1px;
+            width: 250px;
+            height: 100px;
+        }
+
+        .child{
+            background-color: lavender;
+        }
+        .child2{
+            background-color: darkgray;
+        }
+        .child3{
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="parent1">
+        <p class="child1">child1</p>
+        <p class="child2">child2</p>
+        <p class="child3">child3</p>
+    </div>
+    
+    <div class="parent2">
+        <p class="child1">child1</p>
+        <p class="child2">child2</p>
+        <p class="child3">child3</p>
+    </div>
+    
+    <div class="parent3">
+        <p class="child1">child1</p>
+        <p class="child2">child2</p>
+        <p class="child3">child3</p>
+        <p class="child1">child1</p>
+        <p class="child2">child2</p>
+        <p class="child3">child3</p>
+    </div>
+
+    <div class="parent4">
+        <p class="child1">child1</p>
+        <p class="child2">child2</p>
+        <p class="child3">child3</p>
+    </div>
+    
+</body>
+</html>
