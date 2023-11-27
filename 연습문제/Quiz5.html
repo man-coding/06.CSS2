@@ -1,67 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Document</title>
 
     <style>
-        header{
-            display: flex;
+        * {
+            margin: 0;
         }
-        .headmenu1{
-            display: flex;
+
+        header {
+            
+            height: 120px;
+            width: 100%;     /*화면에 꽉 차게??*/
+            background-color: #f6f5f0;
+            padding: 10px;
+            
+            display: flex;   /*헤더 안의 요소들을  flex로 바꿈??*/   
+            position: fixed; /*스크롤 내려도 따라옴*/
+            top: 0;    /*무슨 뜻?*/
+            align-items: center;
+
         }
-        .headmenu2{
+
+        header>div {
+            position: absolute;
+            right: 30px;
+            padding-right: 30px
+        }
+
+        li {
+            margin-left: 20px;
+
+        }
+
+        li>a {
+            font-family: Arial, Helvetica, sans-serif;
+            color: gray;
+            line-height: 2;
+            text-decoration: none;
+
+
+        }
+
+
+        ul {
+            list-style: none;
             display: flex;
+            font: 16px;
+        }
+
+        section {
+            margin-top: 120px;   /*헤더를 픽스했기 때문에 헤더 크기 만큼 마진을 준다*/
+            width: 100%;
+            height: 600px;
+            background-image: url(../bg.jpg);   /*배경이미지는 CSS에 백그라운드로 넣어줘야 한다*/
+            
+            display: flex;
+            align-items: center;    /*가로방향 정렬*/
+            justify-content: center; /*세로방향 정렬*/
+        }
+
+
+
+        footer {
+            height: 300px;
+            background-color: black;
+            opacity: 0.7;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer>div {
+            margin: 20px;
+            display: block;
+        }
+
+        button {
+
+            background-color: black;
+            border-color: white;
+            color: white;
+            margin-right: 30px;
+            padding: 10px 20px;
+        }
+
+        .button:hover {
+            border: 2px solid gray;
+            background-color: white;
+            color: gray;
+            
+        }
+
+
+        span {
+            color: ghostwhite;
+            padding: 30px;
         }
     </style>
 </head>
+
 <body>
 
-    <div>
-        <header><img src="../로고.png" alt="로고 사진입니다">
-            <div class="headmenu1">
-                <ul>
-                    <li><a href="#">Sign In</a></li>
-                    <li><a href="#">My Coffee</a></li>
-                    <li><a href="#">Customer Service & Ideas</a></li>
-                    <li><a href="#">Find a Store</a></li>
-                </ul>
-            </div>
 
-            <div class="headmenu2">
-                <ul>
-                    <li>COFFEE</li>
-                    <li>MENU</li>
-                    <li>STORE</li>
-                    <li>RESPONSIBILITY</li>
-                    <li>MY COFFEE REWARDS</li>
-                    <li>WHAT'S NEW</li>
-                </ul>
-            </div>
-        
-        
-        </header>
+    <header><img src="../로고.png" alt="로고 사진입니다">
+
+        <div>
+            <ul class="menu1">
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">My Coffee</a></li>
+                <li><a href="#">Customer Service & Ideas</a></li>
+                <li><a href="#">Find a Store</a></li>
+            </ul>
+
+            <ul class="menu2">
+                <li><a href="#">COFFEE</a></li>
+                <li><a href="#">MENU</a></li>
+                <li><a href="#">STORE</a></li>
+                <li><a href="#">RESPONSIBILITY</a></li>
+                <li><a href="#">MY COFFEE REWARDS</a></li>
+                <li><a href="#">WHAT'S NEW</a></li>
+            </ul>
+        </div>
 
 
 
+    </header>
+
+    <section>
+        <div> <!--이미지들을 묶어서 가운데로 정렬하기 위함-->
+            <img src="/커피1이름.png" alt="" >
+
+            <img src="/커피1.png" alt="" width="220px">
+
+            <img src="/커피2이름.png" alt="">
+
+            <img src="/커피2.png" alt="" width="220px">
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <button type="butoon" class="button">찾아오시는 길</button>
+            <button type="butoon" class="button">신규입점제의</button>
+            <button type="butoon" class="button">사이트 맵</button>
+        </div>
+        <br>
+        <div>
+            <span>사업자등록번호 123-45-678901</span>
+            <span>(주)커피 코리아</span>
+            <span>TEL : 02) 1234-5678 / FAX : 02) 1234-5678</span>
+            <span>개인정보 책임자 : 고길동</span>
+        </div>
+    </footer>
 
 
-        
-        <section>
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-
-
-        </section>
-
-        <footer>
-            <button>찾아오시는 길</button>
-            <button>신규입점제의</button>
-            <button>사이트 맵</button>
-        </footer>
-    </div>
-    
 </body>
+
 </html>
